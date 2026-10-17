@@ -13,16 +13,18 @@ const Hero = () => {
               src="/images/hero-3.webp" 
               alt="Hi I am Alagappa" 
               className="h-10 sm:h-12 lg:h-14 object-contain mb-2 lg:mb-4"
-              width="240"
-              height="56"
+              width="600"
+              height="180"
+              fetchPriority="high"
+              decoding="async"
             />
             <img 
               src="/images/first-component.webp" 
               alt="Chettinad Person" 
               fetchPriority="high"
               decoding="async"
-              width="320"
-              height="380"
+              width="800"
+              height="1138"
               className="w-full max-h-[35svh] lg:max-h-none h-auto drop-shadow-2xl object-contain object-bottom" 
             />
           </div>
@@ -36,8 +38,8 @@ const Hero = () => {
           <img 
             src="/images/chettinad-logo.webp" 
             alt="Chettinad Bites" 
-            width="128"
-            height="128"
+            width="400"
+            height="409"
             fetchPriority="high"
             decoding="async"
             className="w-24 sm:w-28 md:w-32 lg:w-28 mt-16 sm:mt-8 lg:mt-12 mb-4 lg:mb-6" 
@@ -60,8 +62,8 @@ const Hero = () => {
             <img 
               src="/images/cm-1.webp" 
               alt="Vanakkam. Come in." 
-              width="240"
-              height="112"
+              width="400"
+              height="200"
               fetchPriority="high"
               decoding="async"
               className="h-20 lg:h-28 object-contain" 
