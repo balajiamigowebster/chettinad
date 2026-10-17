@@ -18,15 +18,18 @@ const Hero = () => {
               fetchPriority="high"
               decoding="async"
             />
-            <img 
-              src="/images/first-component.webp" 
-              alt="Chettinad Person" 
-              fetchPriority="high"
-              decoding="async"
-              width="800"
-              height="1138"
-              className="w-full max-h-[35svh] lg:max-h-none h-auto drop-shadow-2xl object-contain object-bottom" 
-            />
+            <picture className="w-full flex justify-center">
+              <source media="(max-width: 767px)" srcSet="/images/first-component-mobile.webp" />
+              <img 
+                src="/images/first-component.webp" 
+                alt="Chettinad Person" 
+                fetchPriority="high"
+                decoding="async"
+                width="800"
+                height="1138"
+                className="w-full max-h-[35svh] lg:max-h-none h-auto drop-shadow-2xl object-contain object-bottom" 
+              />
+            </picture>
           </div>
         </div>
 
