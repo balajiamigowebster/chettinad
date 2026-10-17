@@ -1,54 +1,46 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
     <div id="home" className="w-full h-[100svh] lg:h-screen relative flex items-center overflow-hidden pt-6 sm:pt-12 lg:pt-0 bg-transparent">
       <div className="w-full max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between px-4 sm:px-8 md:px-12 lg:px-16 h-full gap-2 sm:gap-6 lg:gap-0">
         {/* Left side: Person image */}
-        <motion.div 
+        <div 
           className="w-full lg:w-5/12 flex justify-center lg:justify-start items-end lg:items-end relative z-10 lg:self-end h-auto lg:h-full pb-0 lg:pb-0 min-h-[30vh]"
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <div className="flex flex-col items-center w-[45%] sm:w-[40%] md:w-[35%] lg:w-[60%] lg:max-w-none translate-x-2 lg:translate-x-20 xl:translate-x-28">
-            <motion.img 
+            <img 
               src="/images/hero-3.webp" 
               alt="Hi I am Alagappa" 
               className="h-10 sm:h-12 lg:h-14 object-contain mb-2 lg:mb-4"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              width="240"
+              height="56"
             />
             <img 
               src="/images/first-component.webp" 
               alt="Chettinad Person" 
               fetchPriority="high"
               decoding="async"
+              width="320"
+              height="380"
               className="w-full max-h-[35svh] lg:max-h-none h-auto drop-shadow-2xl object-contain object-bottom" 
             />
           </div>
-        </motion.div>
+        </div>
 
         {/* Right side: Content */}
-        <motion.div 
+        <div 
           className="w-full lg:w-7/12 flex flex-col items-center lg:items-start text-center lg:text-left z-10 lg:pl-8 xl:pl-16 pb-4 lg:pb-0 mt-6 sm:mt-12 lg:mt-0"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         >
           {/* Logo */}
-          <motion.img 
+          <img 
             src="/images/chettinad-logo.webp" 
             alt="Chettinad Bites" 
+            width="128"
+            height="128"
+            fetchPriority="high"
+            decoding="async"
             className="w-24 sm:w-28 md:w-32 lg:w-28 mt-16 sm:mt-8 lg:mt-12 mb-4 lg:mb-6" 
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-            transition={{ duration: 0.8, delay: 0.4 }}
           />
           
           {/* Headline */}
@@ -65,7 +57,15 @@ const Hero = () => {
 
           {/* Small Text Area */}
           <div className="w-full flex justify-center lg:justify-start mb-4 lg:mb-6 mt-2 lg:pl-16 xl:pl-24">
-            <img src="/images/cm-1.webp" alt="Vanakkam. Come in." className="h-20 lg:h-28 object-contain" />
+            <img 
+              src="/images/cm-1.webp" 
+              alt="Vanakkam. Come in." 
+              width="240"
+              height="112"
+              fetchPriority="high"
+              decoding="async"
+              className="h-20 lg:h-28 object-contain" 
+            />
           </div>
 
           {/* Call to Action Button */}
@@ -76,7 +76,7 @@ const Hero = () => {
           >
             Come, I'll show you <span className="text-sm lg:text-base">&rarr;</span>
           </motion.button> */}
-        </motion.div>
+        </div>
       </div>
     </div>
   );
