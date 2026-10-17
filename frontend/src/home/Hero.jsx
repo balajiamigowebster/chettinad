@@ -25,6 +25,8 @@ const Hero = () => {
             <img 
               src="/images/first-component.webp" 
               alt="Chettinad Person" 
+              fetchPriority="high"
+              decoding="async"
               className="w-full max-h-[35svh] lg:max-h-none h-auto drop-shadow-2xl object-contain object-bottom" 
             />
           </div>
@@ -40,7 +42,7 @@ const Hero = () => {
         >
           {/* Logo */}
           <motion.img 
-            src="/images/chettinad-logo.png" 
+            src="/images/chettinad-logo.webp" 
             alt="Chettinad Bites" 
             className="w-24 sm:w-28 md:w-32 lg:w-28 mt-16 sm:mt-8 lg:mt-12 mb-4 lg:mb-6" 
             initial={{ opacity: 0, y: -20 }}

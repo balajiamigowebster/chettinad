@@ -71,8 +71,9 @@ const BeyondHome = () => {
         className="w-full lg:w-[50%] xl:w-[50%] h-auto relative order-1 lg:order-2 ml-auto lg:mr-16 xl:mr-24 lg:-translate-x-8 xl:-translate-x-12 lg:my-auto flex items-center pt-8 lg:pt-0 px-4 lg:px-0 lg:translate-y-12 xl:translate-y-16"
       >
         <img
-loading="lazy" 
-          src="/images/Chettinad.png"
+          loading="lazy"
+          decoding="async" 
+          src="/images/Chettinad.webp"
           alt="Chettinad Bites Food Court"
           className="w-full h-auto max-h-[70vh] lg:max-h-[85vh] object-contain rounded-xl"
           style={{

@@ -15,8 +15,9 @@ const South = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <img
-loading="lazy" 
-            src="/images/second-component.png"
+            loading="lazy"
+            decoding="async" 
+            src="/images/second-component.webp"
             alt="Chettinad Person Thinking"
             className="w-[65%] sm:w-[50%] md:w-[40%] lg:w-auto lg:h-[60%] max-h-[35vh] lg:max-h-none drop-shadow-xl object-contain object-bottom lg:object-left-bottom translate-y-0 "
           />

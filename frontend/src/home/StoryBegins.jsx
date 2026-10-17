@@ -93,8 +93,9 @@ const StoryBegins = () => {
           className="w-full lg:w-[30%] flex items-center justify-center lg:justify-end mb-6 lg:mb-0 lg:mt-10 relative top-[2%]"
         >
           <img
-loading="lazy" 
-            src="/images/ShriSuvarna.png"
+            loading="lazy"
+            decoding="async" 
+            src="/images/ShriSuvarna.webp"
             alt="Family eating Chettinad food"
             className="w-[90%] mx-auto lg:w-full h-auto object-contain max-h-[85vh] lg:max-h-none transform scale-100 lg:scale-95 translate-x-0 lg:-translate-x-32 xl:-translate-x-40 translate-y-0 lg:translate-y-8"
             style={{ 

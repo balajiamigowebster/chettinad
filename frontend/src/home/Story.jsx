@@ -24,7 +24,7 @@ loading="lazy"
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.8 }}
-        src="/images/Image5_2.png"
+        src="/images/Image5_2.webp"
         alt="Chettinad Story"
         className="hidden lg:block absolute lg:right-40 xl:right-56 bottom-0 w-[22%] max-w-[300px] object-contain z-10"
       />
@@ -64,7 +64,7 @@ loading="lazy"
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            src="/images/Image5_2.png"
+            src="/images/Image5_2.webp"
             alt="Chettinad Story Person"
             className="block lg:hidden w-full max-w-[200px] mx-auto my-4 object-contain"
           />
