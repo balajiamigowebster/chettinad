@@ -56,10 +56,10 @@ const Home = () => {
       return;
     }
 
-    // Otherwise, defer loading the 8 below-the-fold component bundles until initial Hero frame finishes painting
+    // Defer loading below-the-fold components until user scrolls, touches, or after 3.5s
     const timer = setTimeout(() => {
       setLoadBelowFold(true);
-    }, 1200);
+    }, 3500);
 
     const onScrollOrTouch = () => {
       setLoadBelowFold(true);
