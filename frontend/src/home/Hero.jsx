@@ -61,7 +61,7 @@ const Hero = () => {
           </p>
 
           {/* Small Text Area */}
-          <div className="w-full flex justify-center lg:justify-start mb-4 lg:mb-6 mt-2 lg:pl-16 xl:pl-24">
+          <div className="w-full flex justify-center mb-4 lg:mb-6 mt-2">
             <img 
               src="/images/cm-1.webp" 
               alt="Vanakkam. Come in." 
