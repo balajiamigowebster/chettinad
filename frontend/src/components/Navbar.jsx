@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense, lazy } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import ContactModal from './ContactModal';
+
+const ContactModal = lazy(() => import('./ContactModal'));
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -97,7 +98,11 @@ const Navbar = () => {
       )}
 
       {/* Contact Form Modal */}
-      <ContactModal isOpen={isContactModalOpen} onClose={() => setIsContactModalOpen(false)} />
+      {isContactModalOpen && (
+        <Suspense fallback={null}>
+          <ContactModal isOpen={isContactModalOpen} onClose={() => setIsContactModalOpen(false)} />
+        </Suspense>
+      )}
     </nav>
   );
 };

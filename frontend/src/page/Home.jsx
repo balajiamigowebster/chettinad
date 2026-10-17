@@ -47,55 +47,23 @@ const Home = () => {
     }
   }, [location.hash, location.pathname]);
 
-  const [loadBelowFold, setLoadBelowFold] = React.useState(false);
-
-  useEffect(() => {
-    // If navigating directly to a hash section, load immediately
-    if (location.hash) {
-      setLoadBelowFold(true);
-      return;
-    }
-
-    // Defer loading below-the-fold components until user scrolls, touches, or after 3.5s
-    const timer = setTimeout(() => {
-      setLoadBelowFold(true);
-    }, 3500);
-
-    const onScrollOrTouch = () => {
-      setLoadBelowFold(true);
-      window.removeEventListener('scroll', onScrollOrTouch);
-      window.removeEventListener('touchstart', onScrollOrTouch);
-    };
-
-    window.addEventListener('scroll', onScrollOrTouch, { passive: true });
-    window.addEventListener('touchstart', onScrollOrTouch, { passive: true });
-
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener('scroll', onScrollOrTouch);
-      window.removeEventListener('touchstart', onScrollOrTouch);
-    };
-  }, [location.hash]);
-
   return (
     <div className="w-full min-h-screen flex flex-col">
       <Navbar />
       {/* Hero section loads immediately as it is above the fold */}
       <Hero />
       
-      {/* Other sections load after Hero has finished initial paint */}
-      {loadBelowFold && (
-        <Suspense fallback={<div className="w-full min-h-[50vh] flex items-center justify-center bg-transparent text-[#4a4036] font-serif">Loading content...</div>}>
-          <South />
-          <Intrest />
-          <NonVeg />
-          <Story />
-          <StoryBegins />
-          <BeyondHome />
-          <Speciality />
-          <FromOurHome />
-        </Suspense>
-      )}
+      {/* Lazy loaded sections */}
+      <Suspense fallback={null}>
+        <South />
+        <Intrest />
+        <NonVeg />
+        <Story />
+        <StoryBegins />
+        <BeyondHome />
+        <Speciality />
+        <FromOurHome />
+      </Suspense>
     </div>
   );
 };

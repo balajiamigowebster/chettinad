@@ -9,15 +9,18 @@ const Hero = () => {
           className="w-full lg:w-5/12 flex justify-center lg:justify-start items-end lg:items-end relative z-10 lg:self-end h-auto lg:h-full pb-0 lg:pb-0 min-h-[30vh]"
         >
           <div className="flex flex-col items-center w-[45%] sm:w-[40%] md:w-[35%] lg:w-[60%] lg:max-w-none translate-x-2 lg:translate-x-20 xl:translate-x-28">
-            <img 
-              src="/images/hero-3.webp" 
-              alt="Hi I am Alagappa" 
-              className="h-10 sm:h-12 lg:h-14 object-contain mb-2 lg:mb-4"
-              width="600"
-              height="180"
-              fetchPriority="high"
-              decoding="async"
-            />
+            <picture className="flex justify-center mb-2 lg:mb-4">
+              <source media="(max-width: 767px)" srcSet="/images/hero-3-mobile.webp" />
+              <img 
+                src="/images/hero-3.webp" 
+                alt="Hi I am Alagappa" 
+                className="h-10 sm:h-12 lg:h-14 object-contain"
+                width="600"
+                height="180"
+                fetchPriority="high"
+                decoding="async"
+              />
+            </picture>
             <picture className="w-full flex justify-center">
               <source media="(max-width: 767px)" srcSet="/images/first-component-mobile.webp" />
               <img 
@@ -38,15 +41,18 @@ const Hero = () => {
           className="w-full lg:w-7/12 flex flex-col items-center lg:items-start text-center lg:text-left z-10 lg:pl-8 xl:pl-16 pb-4 lg:pb-0 mt-6 sm:mt-12 lg:mt-0"
         >
           {/* Logo */}
-          <img 
-            src="/images/chettinad-logo.webp" 
-            alt="Chettinad Bites" 
-            width="400"
-            height="409"
-            fetchPriority="high"
-            decoding="async"
-            className="w-24 sm:w-28 md:w-32 lg:w-28 mt-16 sm:mt-8 lg:mt-12 mb-4 lg:mb-6" 
-          />
+          <picture className="w-24 sm:w-28 md:w-32 lg:w-28 mt-16 sm:mt-8 lg:mt-12 mb-4 lg:mb-6">
+            <source media="(max-width: 767px)" srcSet="/images/chettinad-logo-mobile.webp" />
+            <img 
+              src="/images/chettinad-logo.webp" 
+              alt="Chettinad Bites" 
+              width="400"
+              height="409"
+              fetchPriority="high"
+              decoding="async"
+              className="w-full h-auto" 
+            />
+          </picture>
           
           {/* Headline */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[54px] font-serif text-[#2a3822] font-bold leading-[1.05] mb-2 lg:mb-3 tracking-tight">
@@ -62,15 +68,18 @@ const Hero = () => {
 
           {/* Small Text Area */}
           <div className="w-full max-w-xl flex justify-center lg:-translate-x-12 xl:-translate-x-16 mb-4 lg:mb-6 mt-2">
-            <img 
-              src="/images/cm-1.webp" 
-              alt="Vanakkam. Come in." 
-              width="400"
-              height="200"
-              fetchPriority="high"
-              decoding="async"
-              className="h-20 lg:h-28 object-contain" 
-            />
+            <picture className="h-20 lg:h-28">
+              <source media="(max-width: 767px)" srcSet="/images/cm-1-mobile.webp" />
+              <img 
+                src="/images/cm-1.webp" 
+                alt="Vanakkam. Come in." 
+                width="400"
+                height="200"
+                fetchPriority="high"
+                decoding="async"
+                className="h-full w-auto object-contain" 
+              />
+            </picture>
           </div>
 
           {/* Call to Action Button */}
