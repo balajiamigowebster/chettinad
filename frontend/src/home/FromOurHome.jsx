@@ -64,37 +64,43 @@ const FromOurHome = () => {
           </div>
 
           {/* Logos */}
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-5 mb-6 w-full">
-            <div className="flex flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-5 w-full lg:w-auto">
+          <div className="flex flex-wrap lg:flex-nowrap items-center justify-center gap-4 sm:gap-6 lg:gap-5 xl:gap-7 mb-6 w-full max-w-full lg:w-max lg:-translate-x-3">
+            <div className="flex items-center justify-center h-12 sm:h-14 lg:h-16 shrink-0">
               <img loading="lazy" decoding="async" 
                 src="/images/chettinad-logo.webp" 
                 alt="Chettinad Bites" 
-                className="h-12 sm:h-16 object-contain hover:scale-110 transition-transform duration-300 cursor-pointer"
+                className="max-h-11 sm:max-h-12 lg:max-h-14 w-auto object-contain hover:scale-105 transition-transform duration-300 cursor-pointer"
                 onClick={() => window.open('https://chettinad.co.in/', '_blank')}
               />
+            </div>
+            <div className="flex items-center justify-center h-12 sm:h-14 lg:h-16 shrink-0">
               <img loading="lazy" decoding="async" 
                 src="/images/idlish-logo.webp" 
                 alt="iDlish" 
-                className="h-10 sm:h-12 object-contain hover:scale-110 transition-transform duration-300 cursor-pointer"
+                className="max-h-9 sm:max-h-10 lg:max-h-12 w-auto object-contain hover:scale-105 transition-transform duration-300 cursor-pointer"
                 onClick={() => window.open('https://idlish.shop/', '_blank')}
               />
+            </div>
+            <div className="flex items-center justify-center h-12 sm:h-14 lg:h-16 shrink-0">
               <img loading="lazy" decoding="async" 
                 src="/images/2-states.webp" 
                 alt="2 States" 
-                className="h-12 sm:h-16 object-contain hover:scale-110 transition-transform duration-300 cursor-pointer"
+                className="max-h-11 sm:max-h-12 lg:max-h-14 w-auto object-contain hover:scale-105 transition-transform duration-300 cursor-pointer"
                 onClick={() => window.open('https://www.2states.co.in/', '_blank')}
               />
             </div>
-            <div className="flex flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-5 w-full lg:w-auto mt-2 sm:mt-4 lg:mt-0">
+            <div className="flex items-center justify-center h-12 sm:h-14 lg:h-16 shrink-0">
               <img loading="lazy" decoding="async" 
                 src="/images/idaily-logo.webp" 
-                alt="Chettinad Bites" 
-                className="h-12 sm:h-16 object-contain hover:scale-110 transition-transform duration-300"
+                alt="iDaily" 
+                className="max-h-11 sm:max-h-12 lg:max-h-14 w-auto object-contain hover:scale-105 transition-transform duration-300"
               />
+            </div>
+            <div className="flex items-center justify-center h-12 sm:h-14 lg:h-16 shrink-0">
               <img loading="lazy" decoding="async" 
                 src="/images/naanstop-logo.webp" 
                 alt="Naanstop Kitchen" 
-                className="h-16 sm:h-20 object-contain hover:scale-110 transition-transform duration-300"
+                className="max-h-12 sm:max-h-14 lg:max-h-16 w-auto object-contain scale-110 sm:scale-125 lg:scale-125 hover:scale-130 transition-transform duration-300"
               />
             </div>
           </div>
